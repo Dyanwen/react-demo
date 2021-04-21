@@ -1,11 +1,9 @@
-// import ContextPage from './pages/ContextPage'
-// import HocPage from './pages/HocPage'
-import HocPageDescor from './pages/HocPageDescor'
+import ContextPage from './pages/ContextPage'
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <HocPageDescor />
+        <ContextPage />
       </header>
     </div>
   );

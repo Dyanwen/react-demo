@@ -1,24 +1,26 @@
 import React, { Component } from "react";
-import HomePage from "./HomePage";
-import { ThemeContext } from "../Context";
-
+import { ThemeProvider, UserProvider } from "../Context";
+import ConsumerPage from "./ConsumerPage";
+import UseContextPage from "./UseContextPage";
 export class ContextPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       theme: {
-        ThemeColor: "red",
+        themeColor: "red",
       },
+      user: { name: "xiaoming" },
     };
   }
   render() {
-    const { theme } = this.state;
+    const { theme, user } = this.state;
     return (
-      <>
-        <ThemeContext.Provider value={theme}>
-          <HomePage />
-        </ThemeContext.Provider>
-      </>
+      <ThemeProvider value={theme}>
+        <UserProvider value={user}>
+          <ConsumerPage />
+          <UseContextPage />
+        </UserProvider>
+      </ThemeProvider>
     );
   }
 }
