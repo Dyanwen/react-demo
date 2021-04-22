@@ -1,6 +1,6 @@
 import React from 'react';
 // import ContextPage from './pages/ContextPage'
-import AntdFormPageFunction from './pages/AntdFormPageFunction'
+import MyRCFileldForm from './pages/MyRCFileldForm'
 
 import './app.less'
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         {/* <ContextPage /> */}
-        <AntdFormPageFunction />
+        <MyRCFileldForm />
       </header>
     </div>
   );
